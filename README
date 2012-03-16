@@ -1,0 +1,30 @@
+DmPoll allow you to build your own poll template and add it in front with show widget .
+It packages
+- one front widget show to render your poll template and customized it in front .
+- and admin interface to see results and manage your polls .
+- this plugin start with 4 languages(de,en,fa,fr) but for others languages you most customized it .
+attention: poll choices must be separated using "," in poll template.
+The plugin is fully extensible. most be compatibel with [Diem 5.x](http://diem-project.org/) installed.
+
+Install
+-------------
+git clone git://github.com/roozbeh360/DmPollPlugin.git plugins/DmPollPlugin 
+symfony doctrine:generate-migrations-diff
+symfony doctrine:migrate
+symfony dm:setup
+
+Documentation
+-------------
+for better poll form rendering i suggest use following in your theme css file 
+
+#dmpollresult{
+
+/*  this kept  poll block  */
+
+}
+
+#dmpollresult .pollresult{
+position: relative;
+/*  this render your vote results you can use background image  */
+
+}
