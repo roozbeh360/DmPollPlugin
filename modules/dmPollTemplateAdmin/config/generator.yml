@@ -1,0 +1,43 @@
+generator:
+  class: dmAdminDoctrineGenerator
+  param:
+    model_class: DmPollTemplate
+    theme: dmAdmin
+    non_verbose_templates: true
+    with_show: false
+    route_prefix: dm_poll_template
+    with_doctrine_route: false
+    config:
+      actions: ~
+      fields: {  }
+      list:
+        display:
+          - '=title'
+          - question
+          - answers
+          - questions_list
+          - created_at
+          - updated_at
+        sort:
+          - created_at
+          - desc
+        table_method: getAdminListQuery
+        table_count_method: ~
+        sortable: false
+      filter:
+        display:
+          - title
+          - created_at
+          - updated_at
+          - question
+          - answers
+      form:
+        display:
+          NONE: [title]
+          'poll question': [question]
+          Answers: [answers]
+          'Dm poll results': [questions_list]
+        class: DmPollTemplateAdminForm
+        fields: {  }
+      edit: ~
+      new: ~
