@@ -15,6 +15,7 @@ DmPollResults:
   actAs:
     Timestampable:
   columns:
+    culture: {type: string(2), notnull: true}
     question: {type: integer,notnull: true}
     answer: {type: string(50)}
   relations:

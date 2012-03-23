@@ -44,7 +44,13 @@ if(!$__CheckPoll || !in_array($request->getParameter('pollselect'), explode(',',
 // poll result show
  
  $pollCount = array();
- $pollCount = DmPollResultsTable::getInstance()->findByQuestion($request->getParameter('pollid'));
+ 
+ $pollCount = DmPollResultsTable::getInstance()
+ 				->createQuery('c')
+ 				->where('c.question=?',$request->getParameter('pollid'))
+ 				->andWhere('c.culture=?',$this->getUser()->getCulture())
+				->execute();
+				
  $this->getUser()->setAttribute('showPollResult', $pollCount);
  
  //end poll result show

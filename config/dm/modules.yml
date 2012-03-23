@@ -1,9 +1,11 @@
 
 Content:  
-  "poll":
+  "Poll":
     DmPollTemplate:
+      name: Poll Template
       components:
         show:
  
     DmPollResults:
+      name: Poll Results
       components:
