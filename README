@@ -20,7 +20,7 @@ class ProjectConfiguration extends dmProjectConfiguration
  
     $this->enablePlugins(array(  
       // your enabled plugins  
-      'dmContactPlugin'  
+      'DmPollPlugin'  
     ));  
     
 In a console, from your project root dir, run:    
